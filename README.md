@@ -98,6 +98,18 @@ In our experiments, the following conclusions were made:
 ## Additional Experiments
 
 - Knowledge Distillation: Check notebook [`knowledge_distillation.ipynb`](knowledge_distillation.ipynb). We used vanilla Knowledge Distillation for pretrained bert models from HuggingFace. As we observed only a marginal improvement while fine-tuning, we decided to pursue pre-training BERT models.
+- Other optimizations (gradient accumulation, quantization, optimizers):
+
+Check notebook [`optimize_bert_HF.ipynb`](optimize_bert_HF.ipynb)  
+Model = "bert-large-uncased"
+
+| Experiment | Gradient Accumulation Steps | Gradient Checkpointing | Mixed Precision (FP16) | Optimizer | Train Time (s) | Samples/Second | Steps/Second | Train Loss | Epoch | GPU Memory Occupied (MB) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | - | - | - | - | 185.09 | 2.77 | 0.692 | 0.013952209614217281 | 1.0 | 14275 |
+| 2 | 4 | - | - | - | 150.25 | 3.41 | 0.106 | 0.15585996210575104 | 1.0 | 12363 |
+| 3 | 4 | Yes | - | - | 230.57 | 2.22 | 0.139 | 0.050934258848428726 | 1.0 | 6283 |
+| 4 | 4 | Yes | Yes | - | 80.46 | 6.36 | 0.398 | 0.058523036539554596 | 1.0 | 6723 |
+| 5 | 4 | Yes | Yes | AdaFactor | 82.35 | 6.22 | 0.389 | 0.08672035485506058 | 1.0 | 4291 |
 
 
 ## References
