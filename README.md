@@ -52,6 +52,19 @@ The `run_glue.py` script is used for the fine-tuning process, which accepts a nu
 - `lr_scheduler_type`: The learning rate scheduler type to use.
 
 ## Results
+
+| Model Name | Optimizer | Quantization | Number of Epochs | Pretrain loss | Finetune Loss | Finetune Accuracy | Finetune F1 |
+|---|---|---|---|---|---|---|---|
+| final_version_fp32_adamw | AdamW | fp32 | 1000 | 5.085 | 0.6992 | 0.6887 | 0.7822 |
+| final_version_adafactor | Adafactor | fp16 | 1000 | 7.266 | 0.6211 | 0.6833 | 0.7845 |
+| final_version_adam | Adam | fp16 | 1000 | 7.389 | 1.141 | 0.6495 | 0.7556 |
+| final_version_lamb_v2 | LAMB | fp16 | 1000 | 7.033 | 1.029 | 0.6544 | 0.7478 |
+| final_version_adafactor_4000_fp16 | Adafactor | fp16 | 4000 | 4.257 | 0.6167 | 0.6814 | 0.8 |
+| final_version_fp16_adamw_4k | AdamW | fp16 | 4000 | 2.781 | 0.9238 | 0.7034 | 0.7993 |
+| "final_version_lamb_v3_latest" | LAMB | fp16 | 4000 | 3.651 | 0.8003 | 0.63 | 0.7325 |
+| final_fp16_adam_4k | Adam | fp16 | 4000 | 2.858 | 0.96 | 0.685 | 0.7661 |
+
+
 In our experiments, the following conclusions were made:
 
 - **1000 epochs**: AdamW optimizer and fp32 quantization achieved the lowest fine-tune loss and the highest fine-tune accuracy and F1 score.
