@@ -70,7 +70,7 @@ The `run_glue.py` script is used for the fine-tuning process, which accepts a nu
 
 ![Model Performance Plots]
 
-<img src="model_performance1.svg" alt="Results" style="border:1px solid black">
+<img src="final_graph.jpg" alt="Results" style="border:1px solid black">
 
 
 In our experiments, the following conclusions were made:
