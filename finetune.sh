@@ -1,0 +1,16 @@
+python run_glue.py \
+  --model_name_or_path /home/paperspace/bert/bert/tmp/dataset/train/pretraining_experiment-123005401502/123005401502/adamw_4000_fp16_v2_latesh \
+  --task_name MRPC \
+  --max_seq_length 128 \
+  --output_dir /tmp/finetuning \
+  --overwrite_output_dir \
+  --do_train --do_eval \
+  --evaluation_strategy steps \
+  --per_device_train_batch_size 32 --gradient_accumulation_steps 1 \
+  --per_device_eval_batch_size 32 \
+  --learning_rate 5e-5 \
+  --weight_decay 0.01 \
+  --eval_steps 50 --evaluation_strategy steps \
+  --max_grad_norm 1.0 \
+  --num_train_epochs 5 \
+  --lr_scheduler_type polynomial \
