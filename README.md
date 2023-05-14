@@ -68,8 +68,9 @@ The `run_glue.py` script is used for the fine-tuning process, which accepts a nu
 | "final_version_lamb_v3_latest" | LAMB | fp16 | 4000 | 3.651 | 0.8003 | 0.63 | 0.7325 |
 | final_fp16_adam_4k | Adam | fp16 | 4000 | 2.858 | 0.96 | 0.685 | 0.7661 |
 
-![Model Performance Plots](model_performance1.svg)
+![Model Performance Plots]
 
+<img src="model_performance1.svg" alt="Results" style="border:1px solid black">
 
 
 In our experiments, the following conclusions were made:
