@@ -10,7 +10,7 @@ After closing the repo please download this folder tmp from google drive:https:/
 To download and prepare the dataset, run `prepare_dataset.py`. This will download the Wikipedia dataset and shard it into Hadoop files.
 
 ## Pretraining
-For pre-training, run the bash `optimizer.sh` file. It uses different optimizers like Adam, Lamb, AdamW, and Adafactor. You can adjust the number of epochs using the parameter in the bash file.
+For pre-training, run the bash `<optimizer-name>.sh` file. It uses different optimizers like Adam, Lamb, AdamW, and Adafactor. You can adjust the number of epochs using the parameter in the bash file.
 
 The script `run_pretraining.py` is used for the pretraining process, which accepts a number of parameters:
 
@@ -75,6 +75,23 @@ In our experiments, the following conclusions were made:
 - **4000 epochs**: AdamW optimizer and fp16 quantization achieved the highest fine-tune accuracy and F1 score, even though it did not have the lowest fine-tune loss (training for more steps needed).
 - Longer training improves results.
 - The LAMB optimizer did not yield the highest performance in these experiments, contrary to what might be expected given its design for larger models and larger batch sizes.
+
+### Weights & Biases (wandb):
+
+- https://wandb.ai/dl1998/final_fp16_adam_4k  
+- https://wandb.ai/dl1998/final_version_adafactor  
+- https://wandb.ai/dl1998/final_version_adam  
+- https://wandb.ai/dl1998/final_version_lamb_v2  
+- https://wandb.ai/dl1998/final_version_adafactor_4000_fp16  
+- https://wandb.ai/dl1998/final_version_fp16_adamw_4k  
+- https://wandb.ai/dl1998/final_version_lamb_v3_latest  
+- https://wandb.ai/dl1998/final_fp16_adam_4k  
+
+
+## Additional Experiments
+
+- Knowledge Distillation: Check notebook [`knowledge_distillation.ipynb`](knowledge_distillation.ipynb). We used vanilla Knowledge Distillation for pretrained bert models from HuggingFace. As we observed only a marginal improvement while fine-tuning, we decided to pursue pre-training BERT models.
+
 
 ## References
 We have referred to the following repository for our project: [IntelLabs' academic-budget-bert](https://github.com/IntelLabs/academic-budget-bert)
