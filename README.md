@@ -6,6 +6,9 @@ This repository is a part of the HPML Final Project by Inder Preet Singh Walia a
 
 After closing the repo please download this folder tmp from google drive:https://drive.google.com/drive/folders/1_cwnC4Bm_4aHPMcyL8xt8wHDKuJNpjJY?usp=sharing and add this in your repository before running the project. This folder contains weights for all the different models.
 
+All the different saved model files can be found here:https://drive.google.com/drive/u/2/folders/1_gzbCcoHDjUeFl98cPLZ3yY1lyhojYYn
+
+
 ## Dataset Preparation
 To download and prepare the dataset, run `prepare_dataset.py`. This will download the Wikipedia dataset and shard it into Hadoop files.
 
