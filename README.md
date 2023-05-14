@@ -96,6 +96,12 @@ In our experiments, the following conclusions were made:
 ## References
 We have referred to the following repository for our project: [IntelLabs' academic-budget-bert](https://github.com/IntelLabs/academic-budget-bert)
 
+Additionally,
+
+- Devlin, Jacob, et al. "Bert: Pre-training of deep bidirectional transformers for language understanding." arXiv preprint arXiv:1810.04805 (2018).
+- Izsak, Peter, Moshe Berchansky, and Omer Levy. "How to train BERT with an academic budget." arXiv preprint arXiv:2104.07705 (2021).
+
+
 ## Contributing
 Please feel free to open an issue or pull request if you find a bug or have suggestions for improvements.
 
