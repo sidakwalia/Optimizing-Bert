@@ -2,6 +2,11 @@
 
 This repository is a part of the HPML Final Project by Inder Preet Singh Walia and Jash Rathod. It is an optimized BERT implementation, where we used the Wikipedia dataset from Hugging Face and divided it into 2560 Hadoop files. The repository provides tools for both pre-training BERT from scratch and fine-tuning the pre-trained models.
 
+# Authors
+
+Inder Preet Singh Walia (isw2029)  
+Jash Rathod (jsr10000)
+
 # Guidelines
 
 After closing the repo please download this folder tmp from google drive:https://drive.google.com/drive/folders/1_cwnC4Bm_4aHPMcyL8xt8wHDKuJNpjJY?usp=sharing and add this in your repository before running the project. This folder contains weights for all the different models.
